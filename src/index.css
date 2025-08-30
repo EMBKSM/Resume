@@ -1,0 +1,12 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* 웹폰트 import */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+body {
+  font-family: "Pretendard", sans-serif;
+  background-color: #fdfdfd; /* 기본 배경색 지정 */
+  color: #343a40; /* 기본 글자색 지정 */
+}
