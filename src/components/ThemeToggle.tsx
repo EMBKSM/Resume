@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-// 아이콘 SVG 컴포넌트
+// 아이콘 SVG 컴포넌트 (생략)
 const SunIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,6 @@ const SunIcon = () => (
     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
   </svg>
 );
-
 const MoonIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +40,21 @@ const MoonIcon = () => (
   </svg>
 );
 
+type Theme = "light" | "dark";
+
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const [theme, setTheme] = useState<Theme>(() => {
+    if (typeof window !== "undefined") {
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme === "light" || storedTheme === "dark") {
+        return storedTheme;
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+    }
+    return "light";
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
