@@ -1,5 +1,3 @@
-import ThemeToggle from "./ThemeToggle.tsx";
-
 const Header = () => {
   return (
     <header className="flex justify-between items-center py-6 border-b border-light-border dark:border-dark-border">
@@ -28,7 +26,6 @@ const Header = () => {
             Contact
           </a>
         </nav>
-        <ThemeToggle />
       </div>
     </header>
   );
