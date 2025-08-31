@@ -2,16 +2,22 @@ const Hero = () => {
   return (
     <section id="about" className="py-20">
       <h2 className="text-2xl font-bold text-gray-800 dark:text-dark-heading mb-3">
-        VHDL/Verilog를 이용한 고속 디지털 로직 설계 전문가
+        저는 펌웨어부터 RTL까지, 시스템을 관통하는 FPGA 엔지니어입니다
       </h2>
       <div className="text-lg text-light-text dark:text-dark-text space-y-4 leading-relaxed max-w-4xl">
         <p>
-          Xilinx FPGA 기반 시스템에서 고속 데이터 처리 및 제어를 위한 RTL 설계를 수행합니다. AXI4 프로토콜 기반의 커스텀
-          IP 설계 및 검증에 강점이 있으며, 타이밍 클로저와 리소스 최적화를 통해 시스템 성능을 극대화하는 문제 해결
-          능력을 갖추고 있습니다.
+          저는 C/C++, C#, FASM을 기반으로 한 펌웨어 및 시스템 소프트웨어 개발 경험과, Verilog를 활용한 RTL 설계 및 검증
+          역량을 함께 갖춘 엔지니어입니다. 하드웨어와 소프트웨어를 모두 아우르는 이 양방향 기술 스택은, 시스템 레벨에서
+          발생하는 복잡한 문제를 근본적으로 해결하고, 인터페이스 최적화를 통해 효율적이고 안정적인 성능을 구현하는 데
+          강력한 시너지를 발휘합니다.
+        </p>
+        <p>
+          AXI, PCIe와 같은 표준 프로토콜 기반의 IP 설계부터 고속 데이터 처리 시스템 구현까지, 저는 저수준 하드웨어
+          제어부터 상위 레벨 애플리케이션까지 통합적으로 개발할 수 있는 역량을 보유하고 있습니다. 이를 통해 단순한 기능
+          구현을 넘어, 시스템 전체를 바라보며 성능과 확장성을 극대화하는 개발자로 성장해 왔습니다.
         </p>
         <p className="font-mono text-sm text-pcb-green">
-          // 주요 역량: RTL Design, Custom IP, Timing Closure, System Verification
+          // 주요 역량: RTL Design & Verification, FPGA Implementation, C/C++/Python/C#/FASM, System-Level Debugging
         </p>
       </div>
     </section>

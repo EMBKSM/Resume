@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center py-6 border-b border-light-border dark:border-dark-border">
       <div>
-        <h1 className="font-serif text-3xl font-bold text-gray-800 dark:text-dark-heading">김민준</h1>
+        <h1 className="font-serif text-3xl font-bold text-gray-800 dark:text-dark-heading">김성민</h1>
         <p className="text-md text-signal-blue font-semibold">Embedded FPGA / RTL Design Engineer</p>
       </div>
       <div className="flex items-center space-x-6">
