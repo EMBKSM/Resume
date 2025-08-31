@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 
-// --- 타입 정의 ---
 type SectionTitleProps = {
   children: ReactNode;
 };
@@ -10,7 +9,6 @@ type SkillBlockProps = {
   badgeColor: string;
 };
 
-// --- 재사용 컴포넌트 ---
 const SectionTitle = ({ children }: SectionTitleProps) => (
   <h2 className="text-3xl font-bold font-serif text-gray-800 dark:text-dark-heading mb-8 border-l-4 border-signal-blue pl-4">
     {children}
@@ -31,21 +29,18 @@ const SkillBlock = ({ title, skills, badgeColor }: SkillBlockProps) => (
 );
 
 const Skills = () => {
-  // 1. FW & HDL & FPGA 개발 도구 통합
   const devTools = {
     title: "Development Tools",
     skills: ["Xilinx Vivado", "Vitis", "ESP-IDF", "STM32Cube", "Arduino IDE", "Visual Studio", "VS Code"],
     badgeColor: "bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-300",
   };
 
-  // 2. 다뤄본 칩 & 아키텍처 섹션 신설
   const architectures = {
     title: "Chips & Architectures",
     skills: ["Zynq 7020 (Cortex A9)", "ESP32", "STM32 (Cortex M3)", "ESP8266"],
     badgeColor: "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300",
   };
 
-  // 3. 언어 섹션 재구성 (Verilog, SystemVerilog 포함)
   const languages = {
     title: "Languages & Others",
     skills: ["C/C++", "C#", "Python", "Verilog", "SystemVerilog", "Tcl", "FASM", "Git", "Linux Shell Script"],

@@ -6,25 +6,32 @@ type SectionTitleProps = {
 };
 
 const SectionTitle = ({ children }: SectionTitleProps) => (
-  <h2 className="text-3xl font-bold font-serif text-gray-800 dark:text-dark-heading mb-8 border-l-4 border-signal-blue pl-4">
+  <h2 className="text-3xl font-bold font-serif text-dark-heading mb-8 border-l-4 border-signal-blue pl-4">
     {children}
   </h2>
 );
 
 const projectsData = [
   {
-    id: 1,
-    title: "LMB: LoRa 및 GPS 기반 긴급 택시 호출 시스템",
-    device: "ESP32 (TTGO LoRa32 V2.1)",
-    role: "개인 프로젝트 (전체 시스템 설계 및 펌웨어 개발)",
-    tags: ["C++", "LoRa", "GPS", "ESP32", "Embedded Systems", "Problem-Solving"],
+    id: 3, // FLP
+    title: "FLP: LoRa 기반 단체 이동 이탈 감지 시스템",
+    device: "Custom PCB (STM32 & ESP32)",
+    role: "팀 프로젝트 (펌웨어, 하드웨어 회로 설계 담당)",
+    tags: ["C", "LoRa", "GPS", "STM32", "ESP32", "PCB Design", "WebSocket"],
   },
   {
-    id: 2,
+    id: 2, // AXI
     title: "AXI-Stream 기반 고속 이미지 프로세싱 IP 코어 설계",
     device: "Zynq UltraScale+ MPSoC",
     role: "RTL 설계, 시뮬레이션 검증 및 PetaLinux 드라이버 연동",
-    tags: ["Verilog", "AXI4-Stream", "Image Processing", "PetaLinux", "C++"],
+    tags: ["Verilog", "AXI4-Stream", "Image Processing", "PetaLinux"],
+  },
+  {
+    id: 1, // LMB
+    title: "LMB: LoRa 및 GPS 기반 긴급 택시 호출 시스템",
+    device: "ESP32 (TTGO LoRa32 V2.1)",
+    role: "개인 프로젝트 (전체 시스템 설계 및 펌웨어 개발)",
+    tags: ["C++", "LoRa", "GPS", "ESP32", "Embedded Systems"],
   },
 ];
 
