@@ -2,14 +2,22 @@ import { useState } from "react";
 
 const Footer = () => {
   const [phoneCopied, setPhoneCopied] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+
   const phoneNumber = "010-3382-7925";
+  const emailAddress = "embksm@gmail.com";
 
   const handlePhoneClick = () => {
     navigator.clipboard.writeText(phoneNumber).then(() => {
       setPhoneCopied(true);
-      setTimeout(() => {
-        setPhoneCopied(false);
-      }, 2000);
+      setTimeout(() => setPhoneCopied(false), 2000);
+    });
+  };
+
+  const handleEmailClick = () => {
+    navigator.clipboard.writeText(emailAddress).then(() => {
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
     });
   };
 
@@ -19,12 +27,29 @@ const Footer = () => {
       <p className="text-lg text-gray-600 dark:text-dark-text mb-6 max-w-2xl mx-auto">
         하드웨어와 소프트웨어의 경계를 넘어, 최적의 솔루션을 만들어갈 새로운 도전을 환영합니다.
       </p>
-      <div className="flex justify-center items-center space-x-8 text-signal-blue font-semibold text-lg">
-        <a href="mailto:embksm@gmail.com" className="hover:underline dark:hover:text-pcb-green transition-colors">
-          Email
-        </a>
 
-        {/* 전화번호를 위한 버튼과 툴팁 */}
+      <div className="flex justify-center items-center space-x-8 text-signal-blue font-semibold text-lg">
+        {/* 📧 이메일 버튼 + 툴팁 */}
+        <div className="relative">
+          <button
+            onClick={handleEmailClick}
+            className="hover:underline dark:hover:text-pcb-green transition-colors focus:outline-none"
+          >
+            Email
+          </button>
+          {emailCopied && (
+            <div
+              className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
+                         px-3 py-2 bg-gray-800 text-white text-xs rounded-md shadow-lg 
+                         transition-opacity duration-300 text-center w-max"
+            >
+              {emailAddress}
+              <span className="block text-green-400 font-bold">Copied!</span>
+            </div>
+          )}
+        </div>
+
+        {/* 📱 전화번호 버튼 + 툴팁 */}
         <div className="relative">
           <button
             onClick={handlePhoneClick}
@@ -44,6 +69,7 @@ const Footer = () => {
           )}
         </div>
 
+        {/* 🔗 깃허브 */}
         <a
           href="https://github.com/EMBKSM"
           target="_blank"
@@ -53,6 +79,7 @@ const Footer = () => {
           GitHub
         </a>
       </div>
+
       <p className="text-sm text-gray-500 dark:text-gray-400 mt-10">© 2025 김성민. All Rights Reserved.</p>
     </footer>
   );
