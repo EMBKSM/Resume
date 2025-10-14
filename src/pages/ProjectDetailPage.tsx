@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react"; // 👈 1. 애니메이션 효과를 위해 두 가지를 import 합니다.
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import type { ReactNode } from "react";
 
-// --- 타입 정의 ---
 type SectionTitleProps = {
   children: ReactNode;
 };
 
-// --- 재사용 컴포넌트 ---
 const SectionTitle = ({ children }: SectionTitleProps) => (
   <h3 className="text-2xl font-bold text-dark-heading mb-4 mt-8 border-l-4 border-signal-orange pl-3">{children}</h3>
 );
 
-// --- 프로젝트 데이터베이스 ---
 const projectDatabase: { [key: string]: any } = {
-  // ... (이전과 동일한 프로젝트 데이터)
   "1": {
     title: "LMB: LoRa 및 GPS 기반 긴급 택시 호출 시스템",
     description:
@@ -41,7 +37,17 @@ const projectDatabase: { [key: string]: any } = {
     title: "AXI-Stream 기반 고속 이미지 프로세싱 IP 코어 설계",
     description:
       "Zynq UltraScale+ MPSoC 환경에서 고속으로 입력되는 이미지 데이터를 실시간으로 처리하기 위한 FPGA 기반 IP 코어를 설계하고 검증한 프로젝트입니다.",
+    background:
+      "소프트웨어만으로는 실시간 처리가 어려운 고해상도 영상 데이터나 머신비전 시스템의 처리 속도 한계를 극복하고자 프로젝트를 기획했습니다. CPU의 순차적 연산 방식에서 벗어나, FPGA의 병렬 처리 능력을 활용하여 데이터 처리 파이프라인을 하드웨어로 구현함으로써 높은 Throughput과 Low Latency 성능을 확보하고자 했습니다.",
     teamInfo: "개인 프로젝트",
+    features: [
+      "고속 데이터 전송을 위한 표준 AXI-Stream 프로토콜을 사용하여 데이터를 실시간 입출력",
+      "입력되는 영상의 Grayscale 변환 및 Sobel Edge Detection 필터를 하드웨어 로직으로 구현하여 실시간 처리 수행",
+      "FPGA의 병렬 처리 아키텍처를 통해 픽셀 단위의 파이프라인을 구축하여 고속의 데이터 처리",
+      "설계된 IP 코어를 Zynq MPSoC의 PL에 통합하고, PS와 연동하여 전체 시스템 제어",
+    ],
+    retrospective:
+      "AXI-Stream 프로토콜의 TVALID, TREADY 핸드셰이크 과정을 완벽히 이해하고 타이밍을 맞추는 과정에서 데이터 유실 문제를 겪었습니다. 시뮬레이션을 통해 신호의 타이밍을 세밀하게 분석하고 FSM(Finite State Machine)을 수정하며 프로토콜의 동작 원리를 깊이 있게 체득할 수 있었습니다. 이 프로젝트를 통해 소프트웨어만으로는 해결할 수 없는 성능의 한계를 하드웨어 가속을 통해 극복하는 방법을 배웠으며, CPU와 FPGA가 협력하는 이기종 컴퓨팅 시스템에 대한 실질적인 이해를 높이는 계기가 되었습니다.",
   },
   "3": {
     title: "FLP: LoRa 기반 단체 이동 이탈 감지 시스템",
