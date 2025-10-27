@@ -45,16 +45,26 @@ const MoreInfo = () => {
           <div className="space-y-6">
             <div>
               <h4 className="text-xl font-semibold text-gray-700 dark:text-dark-heading mb-3">Awards</h4>
+              {/* --- [수정됨] 수상 내역 추가 --- */}
               <ul className="list-disc list-inside text-light-text dark:text-dark-text space-y-1 pl-4">
                 <li className="flex justify-between">
-                  <span>빛가람 에너지밸리 소프트웨어 경진대회 우수상 (2024.12)</span>
-                  <span>한전KDN</span>
+                  <span>2024 빛가람에너지밸리 소프트웨어 작품 경진대회 우수상 (2024.11)</span>
+                  <span>한전 KDN</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>2025 교내해커톤 대회 우수상 (2025.07)</span>
+                  <span>코딩역량인증 대회 동상(3등) (2024.12)</span>
                   <span>대덕소프트웨어마이스터고등학교</span>
                 </li>
+                <li className="flex justify-between">
+                  <span>2025 교내 해커톤 우수상 (2025.07)</span>
+                  <span>대덕소프트웨어마이스터고등학교</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>제 7회 한국 코드 페어 SW공모전 본선 진출 (2025.10)</span>
+                  <span>과학기술정보통신부</span>
+                </li>
               </ul>
+              {/* --- [수정 완료] --- */}
             </div>
             <div>
               <h4 className="text-xl font-semibold text-gray-700 dark:text-dark-heading mb-3">Certifications</h4>

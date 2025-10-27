@@ -37,7 +37,7 @@ const Skills = () => {
 
   const architectures = {
     title: "Chips & Architectures",
-    skills: ["Zynq 7020 (Cortex A9)", "ESP32", "STM32 (Cortex M3)", "ESP8266"],
+    skills: ["Zynq 7020 (Cortex A9)", "ESP32", "STM32 (Cortex M3, Cortex M4)", "ESP8266"],
     badgeColor: "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-300",
   };
 
