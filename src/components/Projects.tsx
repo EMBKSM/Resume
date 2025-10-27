@@ -17,7 +17,7 @@ const projectsData = [
     title: "FLP: LoRa 기반 단체 이동 이탈 감지 시스템",
     device: "Custom PCB (STM32 & ESP32)",
     role: "팀 프로젝트 (펌웨어, 하드웨어 회로 설계 담당)",
-    tags: ["C", "LoRa", "GPS", "STM32", "ESP32", "PCB Design", "WebSocket"],
+    tags: ["C", "LoRa", "GPS", "STM32", "ESP32", "OTA", "KiCAD"],
   },
   {
     id: 2, // AXI
