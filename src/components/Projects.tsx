@@ -11,13 +11,21 @@ const SectionTitle = ({ children }: SectionTitleProps) => (
   </h2>
 );
 
+// --- [최종 수정] ---
 const projectsData = [
   {
-    id: 3, // FLP
+    id: 4, // FLP
     title: "FLP: LoRa 기반 단체 이동 이탈 감지 시스템",
     device: "Custom PCB (STM32 & ESP32)",
     role: "팀 프로젝트 (펌웨어, 하드웨어 회로 설계 담당)",
     tags: ["C", "LoRa", "GPS", "STM32", "ESP32", "OTA", "KiCAD"],
+  },
+  {
+    id: 3, // Health-Run
+    title: "Health-Run: AI 러닝 자세 교정 시스템 (해커톤)",
+    device: "Zynq-7020, 5x IMU Sensors",
+    role: "팀 프로젝트 (FPGA PL/PS, 2x CNN 모델 설계 및 구현 담당)",
+    tags: ["FPGA", "Verilog", "Zynq-7020", "AXI4-Stream", "On-Device AI", "CNN", "IMU", "Real-Time"],
   },
   {
     id: 2, // AXI
@@ -34,6 +42,7 @@ const projectsData = [
     tags: ["C++", "LoRa", "GPS", "ESP32", "Embedded Systems"],
   },
 ];
+// --- [수정 완료] ---
 
 const Projects = () => {
   return (
